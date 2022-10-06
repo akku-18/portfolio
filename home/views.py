@@ -8,7 +8,12 @@ def home(request):
     return render(request, 'home.html', context)
 
 def about(request):
-    return render(request, 'about.html')
+    title = ['Developer', 'Coder', 'Designer']
+    description = ['description 1', 'description 2', 'description 3']
+    images = ['https://source.unsplash.com/400x200/?developer,html','https://source.unsplash.com/400x200/?coder,css,html','https://source.unsplash.com/400x200/?gamer,designer']
+    card = zip(title, description, images)
+    context = {'card':card}
+    return render(request, 'about.html', context)
 
 def contact(request):
     if request.method=='POST':

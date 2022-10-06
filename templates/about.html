@@ -9,18 +9,19 @@
 
         
         <div class="row">
+        {% for t, d, i in card %}
           <div class="col-sm-3">
               <div class="card" style="width: 18rem;">
-                  <img src="https://source.unsplash.com/400x200/?developer,html" class="card-img-top" alt="...">
+                  <img src="{{i}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                      <h5 class="card-title">Developer</h5>
-                      <p class="card-text">Loves to develope django apps.</p>
+                      <h5 class="card-title">{{t}}</h5>
+                      <p class="card-text">{{d}}</p>
                       <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
               </div>
             </div>
-
-            <div class="col-sm-3">
+        {% endfor %}
+            <!-- <div class="col-sm-3">
                 <div class="card" style="width: 18rem;">
                     <img src="https://source.unsplash.com/400x200/?nature,fire" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -53,5 +54,5 @@
                 </div>
             </div>
         </div>  
-    </div>
+    </div> -->
     {% endblock %} 
